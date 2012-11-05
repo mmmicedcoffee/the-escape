@@ -3,11 +3,11 @@ package datamodels.items;
 import datamodels.Player;
 
 public class Axe extends Item {
-    public Axe(String aName,
-               String aDescription,
+    public Axe(String name,
+               String description,
                boolean canPickUp,
                String probeMessage) {
-        super(aName, aDescription, canPickUp, probeMessage);
+        super(name, description, canPickUp, probeMessage);
     }
 
     @Override

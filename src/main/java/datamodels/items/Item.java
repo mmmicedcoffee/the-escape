@@ -8,12 +8,12 @@ public abstract class Item {
     protected boolean canPickUp;
     protected String probeMessage;
 
-    public Item(String aName,
-                String aDescription,
+    public Item(String name,
+                String description,
                 boolean canPickUp,
                 String probeMessage) {
-        this.name = aName;
-        this.description = aDescription;
+        this.name = name;
+        this.description = description;
         this.canPickUp = canPickUp;
         this.probeMessage = probeMessage;
     }

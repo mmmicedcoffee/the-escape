@@ -14,10 +14,10 @@ public class Game {
     private final Model model;
     private final Player player;
 
-    public Game(Parser aParser, Model aModel, Player aPlayer) {
-        this.parser = aParser;
-        this.model = aModel;
-        this.player = aPlayer;
+    public Game(Parser parser, Model model, Player player) {
+        this.parser = parser;
+        this.model = model;
+        this.player = player;
     }
 
     public void beginGame() {

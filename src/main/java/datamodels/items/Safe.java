@@ -7,12 +7,12 @@ public class Safe extends Item {
     private final Key key;
     private boolean openedSafe = false;
 
-    public Safe(String aName,
-                String aDescription,
+    public Safe(String name,
+                String description,
                 boolean canPickUp,
                 String probeMessage,
                 Key key) {
-        super(aName, aDescription, canPickUp, probeMessage);
+        super(name, description, canPickUp, probeMessage);
         this.key = key;
     }
 

@@ -12,9 +12,9 @@ public class Room {
     protected final Exit[] exits = new Exit[4];
     protected final HashSet<Item> items = newHashSet();
 
-    public Room(String aName, String aDescription) {
-        this.name = aName;
-        this.description = aDescription;
+    public Room(String name, String description) {
+        this.name = name;
+        this.description = description;
     }
 
     public Room moveDirection(int direction) {
@@ -24,8 +24,8 @@ public class Room {
         return exits[direction].getAdjoiningRoom();
     }
 
-    public void addExits(Exit... anExits) {
-        for (Exit exit : anExits) {
+    public void addExits(Exit... exitsToBeAdded) {
+        for (Exit exit : exitsToBeAdded) {
             exits[exit.getDirection()] = exit;
         }
     }
@@ -34,18 +34,18 @@ public class Room {
         return exits[direction];
     }
 
-    public boolean hasItem(Item anItem) {
-        return items.contains(anItem);
+    public boolean hasItem(Item item) {
+        return items.contains(item);
     }
 
-    public void addItems(Item... anItems) {
-        for (Item item : anItems) {
+    public void addItems(Item... itemsToBeAdded) {
+        for (Item item : itemsToBeAdded) {
             items.add(item);
         }
     }
 
-    public void removeItem(Item anItem) {
-        items.remove(anItem);
+    public void removeItem(Item item) {
+        items.remove(item);
     }
 
     private boolean noExits() {

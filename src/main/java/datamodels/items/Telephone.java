@@ -6,13 +6,13 @@ public class Telephone extends Item {
     private final Axe axe;
     private boolean hasBeenAxed = false;
 
-    public Telephone(String aName,
-                     String aDescription,
+    public Telephone(String name,
+                     String description,
                      boolean canPickUp,
                      String probeMessage,
-                     Axe anAxe) {
-        super(aName, aDescription, canPickUp, probeMessage);
-        this.axe = anAxe;
+                     Axe axe) {
+        super(name, description, canPickUp, probeMessage);
+        this.axe = axe;
     }
 
     @Override

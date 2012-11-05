@@ -8,13 +8,13 @@ import static util.DirectionUtil.NORTH;
 public class Key extends Item {
     private final Room unlockableRoom;
 
-    public Key(String aName,
-               String aDescription,
+    public Key(String name,
+               String description,
                boolean canPickUp,
                String probeMessage,
-               Room aRoom) {
-        super(aName, aDescription, canPickUp, probeMessage);
-        this.unlockableRoom = aRoom;
+               Room unlockableRoom) {
+        super(name, description, canPickUp, probeMessage);
+        this.unlockableRoom = unlockableRoom;
     }
 
     public void tryUnlock(Player player) {

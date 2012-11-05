@@ -11,27 +11,27 @@ public class Player {
     private Room location;
     private boolean hasHeardVoiceMail = false;
 
-    public Player(Room aStartLocation) {
+    public Player(Room startLocation) {
         this.inventory = new HashSet<Item>();
         this.keys = new HashSet<Key>();
-        this.location = aStartLocation;
+        this.location = startLocation;
     }
 
-    public void changeLocation(Room aLocation) {
-        location = aLocation;
+    public void changeLocation(Room newRoom) {
+        location = newRoom;
     }
 
-    public void addItem(Item anItem) {
-        inventory.add(anItem);
-        if (anItem instanceof Key) {
-            keys.add((Key) anItem);
+    public void addItem(Item item) {
+        inventory.add(item);
+        if (item instanceof Key) {
+            keys.add((Key) item);
         }
     }
 
-    public void removeItem(Item anItem) {
-        inventory.remove(anItem);
-        if (keys.contains(anItem)) {
-            keys.remove(anItem);
+    public void removeItem(Item item) {
+        inventory.remove(item);
+        if (keys.contains(item)) {
+            keys.remove(item);
         }
     }
 
